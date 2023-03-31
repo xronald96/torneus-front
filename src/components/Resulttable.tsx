@@ -10,24 +10,18 @@ export default function ResultTable({ data }: any) {
 				</div>
 				{data.matches.map((item: any) => {
 					return (
-						<>
-							<div key={item._id}>
-								<div className='flex gap-5 border-b-2 border-main font-poppins text-lg py-2'>
-									<div className='w-10 justify-center flex'>
-										{item.teams[0].points}
-									</div>
-									<div className='w-25 justify-center flex'>
-										{item.teams[0].name}
-									</div>
-									<div className='w-25 justify-center flex'>
-										{item.teams[1].name}
-									</div>
-									<div className='w-10 justify-center flex'>
-										{item.teams[1].points}
-									</div>
+						<div key={item._id}>
+							<div className='flex gap-5 border-b-2 border-main font-poppins text-lg py-2'>
+								<div className='w-10 justify-center flex'>
+									{item.teams[0].points}
+								</div>
+								<div className='w-25 justify-center flex'>{item.teams[0].name}</div>
+								<div className='w-25 justify-center flex'>{item.teams[1].name}</div>
+								<div className='w-10 justify-center flex'>
+									{item.teams[1].points}
 								</div>
 							</div>
-						</>
+						</div>
 					);
 				})}
 				<TableResult data={data.resultGroup} />
