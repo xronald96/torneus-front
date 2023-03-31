@@ -12,7 +12,6 @@ export default function Managment() {
 
 	const fetchData = async () => {
 		let groups = (await getGroups()).data.getGroups;
-		console.log(groups);
 		setData(groups);
 	};
 
@@ -27,6 +26,7 @@ export default function Managment() {
 	const onSave = async (data: any) => {
 		const { _id, teams } = data;
 		const result = await updateMatch({ _id, teams });
+		fetchData();
 	};
 	return (
 		<div className='flex p-10 flex-col'>
@@ -83,6 +83,9 @@ export default function Managment() {
 														)
 													}
 												/>
+												<div className='flex w-24 text-center justify-center items-center'>
+													{match.state}
+												</div>
 												<div
 													onClick={() => onSave(match)}
 													className='flex justify-center align-middle rounded-md border-2 border-main p-2 cursor-pointer'

@@ -1,5 +1,5 @@
 import { CreateGroupDto, FilterGroupDto } from '../../types/Group.dto';
-
+const API = 'https://torneus-back.onrender.com/graphql'
 export const getGroups = async (filterGroupDto?: FilterGroupDto) => {
 	const headers = {
 		'content-type': 'application/json',
@@ -25,6 +25,7 @@ export const getGroups = async (filterGroupDto?: FilterGroupDto) => {
 					  name
 					  points
 					}
+					state
 					_id
 				  }
 				  resultGroup{
@@ -46,7 +47,7 @@ export const getGroups = async (filterGroupDto?: FilterGroupDto) => {
 		headers,
 		body: JSON.stringify(requestBody),
 	};
-	return await (await fetch('http://localhost:3002/graphql', options)).json();
+	return await (await fetch(API, options)).json();
 };
 
 export const createGroups = async (createGroupDto: CreateGroupDto) => {
@@ -80,5 +81,5 @@ export const createGroups = async (createGroupDto: CreateGroupDto) => {
 		headers,
 		body: JSON.stringify(requestBody),
 	};
-	return await (await fetch('http://localhost:3002/graphql', options)).json();
+	return await (await fetch(API, options)).json();
 };

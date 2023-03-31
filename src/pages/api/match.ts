@@ -1,5 +1,5 @@
 import { CreateMatchDto, FilterMatchDto, UpdateMatchDto } from '../../types/Match.dto';
-
+const API = 'https://torneus-back.onrender.com/graphql'
 export const getMatches = async (filterMatchDto?: FilterMatchDto) => {
 	const headers = {
 		'content-type': 'application/json',
@@ -24,7 +24,7 @@ export const getMatches = async (filterMatchDto?: FilterMatchDto) => {
 		headers,
 		body: JSON.stringify(requestBody),
 	};
-	return await (await fetch('http://localhost:3002/graphql', options)).json();
+	return await (await fetch(API, options)).json();
 };
 
 export const createMatch = async (createMatchDto: CreateMatchDto) => {
@@ -60,7 +60,7 @@ export const createMatch = async (createMatchDto: CreateMatchDto) => {
 		headers,
 		body: JSON.stringify(requestBody),
 	};
-	return await (await fetch('http://localhost:3002/graphql', options)).json();
+	return await (await fetch(API, options)).json();
 };
 
 export const updateMatch = async (updateMatchDto: UpdateMatchDto) => {
@@ -94,5 +94,5 @@ mutation($_id: String!, $teams: [Team!]!){
 		headers,
 		body: JSON.stringify(requestBody),
 	};
-	return await (await fetch('http://localhost:3002/graphql', options)).json();
+	return await (await fetch(API, options)).json();
 };

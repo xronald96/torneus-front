@@ -1,5 +1,5 @@
 import { CreateTournamentDto } from '../../types/Tournament.type';
-
+const API = 'https://torneus-back.onrender.com/graphql';
 export const getTournaments = async () => {
 	const headers = {
 		'content-type': 'application/json',
@@ -22,7 +22,7 @@ export const getTournaments = async () => {
 		headers,
 		body: JSON.stringify(requestBody),
 	};
-	return await (await fetch('http://localhost:3002/graphql', options)).json();
+	return await (await fetch(API, options)).json();
 };
 
 export const createTournament = async (createTournamentDto: CreateTournamentDto) => {
@@ -57,5 +57,5 @@ export const createTournament = async (createTournamentDto: CreateTournamentDto)
 		headers,
 		body: JSON.stringify(requestBody),
 	};
-	return await (await fetch('http://localhost:3002/graphql', options)).json();
+	return await (await fetch(API, options)).json();
 };
