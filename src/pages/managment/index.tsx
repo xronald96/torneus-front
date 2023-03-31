@@ -33,13 +33,13 @@ export default function Managment() {
 			<div className='pb-2 flex mb-3 font-poppins font-bold border-main border-b-4 w-36'>
 				Torneos Activos
 			</div>
-			<div className='flex gap-5'>
+			<div className='flex gap-5 flex-wrap'>
 				{data.length &&
 					data.map((item: any) => {
 						return (
 							<div
 								key={item.group._id}
-								className='mr-32 flex gap-5 flex-col font-poppins font-semibold from-neutral-900'
+								className='mr-12 flex gap-5 flex-col font-poppins font-semibold from-neutral-900'
 							>
 								<div className='border-b-2 flex justify-center font-bold font-poppins border-main text-2xl'>
 									{item.group.name}
@@ -65,7 +65,7 @@ export default function Managment() {
 													}
 												/>
 
-												<div className='flex w-20 text-center justify-center items-center'>
+												<div className='flex w-20 text-center justify-center items-center mr-2'>
 													{match.teams[0].name}
 												</div>
 												<div className='w-20 justify-center flex items-center cursor-pointer'>
