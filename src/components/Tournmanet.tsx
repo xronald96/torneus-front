@@ -20,7 +20,7 @@ export default function Tournament({ data }: { data: any[] }) {
 								<Image
 									className='w-full'
 									alt=''
-									src={torneysIcon}
+									src={tournament.image}
 									width={50}
 									height={70}
 								/>

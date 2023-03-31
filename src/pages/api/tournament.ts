@@ -12,6 +12,7 @@ export const getTournaments = async () => {
           teams
           teamsAvailables
           date
+		  image
         }
       }`;
 	const requestBody = {
@@ -42,6 +43,7 @@ export const createTournament = async (createTournamentDto: CreateTournamentDto)
               name,
               teams,
               teamsAvailables
+			  image
             }
           }`,
 		variables: {
