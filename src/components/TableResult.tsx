@@ -19,7 +19,7 @@ export default function TableResult({
 				</div>
 				<div className='flex text-main p-3 '>
 					<div className='flex w-20 items-center '>Pos</div>
-					<div className='flex w-20 items-center '>Nombre</div>
+					<div className='flex w-25 items-center '>Nombre</div>
 					<div className='flex w-20 items-center '>Pts</div>
 					<div className='flex w-20 items-center '>GF</div>
 					<div className='flex w-20 items-center '>GE</div>
@@ -33,7 +33,7 @@ export default function TableResult({
 								key={index}
 							>
 								<div className='flex w-20 items-center'>{index + 1}</div>
-								<div className='flex w-20 items-center'>{item.name}</div>
+								<div className='flex w-25 items-center'>{item.name}</div>
 								<div className='flex w-20 items-center'>{item.points}</div>
 								<div className='flex w-20 items-center'>{item.gf}</div>
 								<div className='flex w-20 items-center'>{item.ge}</div>

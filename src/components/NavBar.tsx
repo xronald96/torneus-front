@@ -13,13 +13,13 @@ export default function NavBar({ children } : any) {
 				>
 					Torneus ES
 				</Link>
-				<Link
+				{/* <Link
 					href={'/about'}
 					className='flex font-bold mr-5 no-underline text-white font-poppins'
 				>
 					Quienes somos
 				</Link>
-				<LoginLogout />
+				<LoginLogout /> */}
 			</div>
 			{children}
 		</>
