@@ -53,7 +53,7 @@ export default function Managment() {
 												key={match._id}
 											>
 												<input
-													className='w-10 justify-center flex text-center'
+													className='w-10 justify-center flex text-center border-main border-2 rounded'
 													defaultValue={match.teams[0].points}
 													onChange={(e) =>
 														onChange(
@@ -72,7 +72,7 @@ export default function Managment() {
 													{match.teams[1].name}
 												</div>
 												<input
-													className='w-10 justify-center flex text-center'
+													className='w-10 justify-center flex text-center border-main border-2 rounded'
 													defaultValue={match.teams[1].points}
 													onChange={(e) =>
 														onChange(
