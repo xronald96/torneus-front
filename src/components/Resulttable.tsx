@@ -4,7 +4,7 @@ import TableResult from './TableResult';
 export default function ResultTable({ data }: any) {
 	return (
 		<div className='flex justify-center'>
-			<div className='flex flex-col'>
+			<div className='flex flex-col w-96'>
 				<div className='mb- border-b-2 flex justify-center font-bold font-poppins border-main text-2xl'>
 					{data.group.name}
 				</div>

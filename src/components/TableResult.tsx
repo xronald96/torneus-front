@@ -18,12 +18,12 @@ export default function TableResult({
 					Clasificación
 				</div>
 				<div className='flex text-main p-3 '>
-					<div className='flex w-20 items-center '>Pos</div>
-					<div className='flex w-25 items-center '>Nombre</div>
-					<div className='flex w-20 items-center '>Pts</div>
-					<div className='flex w-20 items-center '>GF</div>
-					<div className='flex w-20 items-center '>GE</div>
-					<div className='flex w-20 items-center '>GD</div>
+					<div className='flex w-20 items-center'>Pos</div>
+					<div className='flex w-25 items-center'>Nombre</div>
+					<div className='flex w-20 items-center justify-center'>Pts</div>
+					<div className='flex w-20 items-center justify-center'>GF</div>
+					<div className='flex w-20 items-center justify-center'>GE</div>
+					<div className='flex w-20 items-center justify-center'>GD</div>
 				</div>
 				{data &&
 					data.map((item, index: number) => {
@@ -34,10 +34,18 @@ export default function TableResult({
 							>
 								<div className='flex w-20 items-center'>{index + 1}</div>
 								<div className='flex w-25 items-center'>{item.name}</div>
-								<div className='flex w-20 items-center'>{item.points}</div>
-								<div className='flex w-20 items-center'>{item.gf}</div>
-								<div className='flex w-20 items-center'>{item.ge}</div>
-								<div className='flex w-20 items-center'>{item.gd}</div>
+								<div className='flex w-20 items-center justify-center'>
+									{item.points}
+								</div>
+								<div className='flex w-20 items-center justify-center'>
+									{item.gf}
+								</div>
+								<div className='flex w-20 items-center justify-center'>
+									{item.ge}
+								</div>
+								<div className='flex w-20 items-center justify-center'>
+									{item.gd}
+								</div>
 							</div>
 						);
 					})}

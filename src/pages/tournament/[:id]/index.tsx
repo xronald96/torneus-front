@@ -4,7 +4,7 @@ import { getMatches } from '../../api/match';
 
 export default function TournamentView({ groups }: any) {
 	return (
-		<div className='flex flex-wrap justify-center'>
+		<div className='flex flex-wrap justify-center overflow-hidden'>
 			<div className='flex p-10 gap-5 flex-wrap justify-center'>
 				{groups.map((item: any) => {
 					return <ResultTable key={item._id} data={item} />;
